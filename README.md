@@ -6,13 +6,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.options import Options
 import time
 
-# Use provided credentials
-email = "vasimhushain.1903@gmail.com"
-password = "Vasimslogin@666"
+# Provided user credentials
 first_name = "Vasim"
 last_name = "S"
+email = "vasimhushain.1903@gmail.com"
+password = "Vasimslogin@666"
 
-# Setup Firefox driver
+# Setup Firefox browser
 options = Options()
 options.add_argument("--width=1024")
 options.add_argument("--height=768")
@@ -22,7 +22,6 @@ try:
     # Step 1: Open Magento site
     driver.get("https://magento.softwaretestingboard.com/")
     driver.find_element(By.LINK_TEXT, "Create an Account").click()
-
 
 finally:
     time.sleep(5)
